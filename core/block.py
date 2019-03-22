@@ -1,5 +1,6 @@
 from datetime import datetime
 from hashlib import sha256
+from pprint import pprint 
 
 class Block():
     block_number = 0
@@ -11,8 +12,15 @@ class Block():
         self.nonce = 0
         self.timestamp = datetime.now()
         self.hash = self.get_hash()
+        self.mine()
 
     def get_hash(self):
+        """
+            The get hash function hash the block variable and returns it's hash.
+
+            :rteturns: The hash
+            :rtype: str
+        """
         to_digest = "".join([str(item) for item in self.__dict__.values()])
         to_digest += str(Block.block_number)
         hash_ = sha256()
@@ -36,6 +44,9 @@ class Block():
     
     def block_is_valid(self):
         return True if all(num == '0' for num in self.hash[:4]) else False
+
+    def prettify_block(self):
+        pprint(self.__dict__)
 
 if __name__ == '__main__':
     block = Block("hello")
