@@ -1,7 +1,6 @@
 from block import Block
 from hashlib import sha256
 from itertools import zip_longest
-from pprint import pprint 
 
 class Blockchain():
     def __init__(self):
@@ -30,6 +29,8 @@ class Blockchain():
             otherwise it means that blockchain has been corrupted.
             The root hash computed by the merkle tree update the root hash after every adding in blockchain.
 
+            :returns:   The root hash
+            :rtype:     str
         """
         even = [block.hash for i, block in enumerate(self.blocks) if i % 2 == 0]
         odd = [block.hash for i, block in enumerate(self.blocks) if i % 2 != 0]
@@ -46,3 +47,4 @@ class Blockchain():
             self.root_hash = temp[0]
         else:
             self.root_hash = self.blocks[0].hash
+        return self.root_hash
