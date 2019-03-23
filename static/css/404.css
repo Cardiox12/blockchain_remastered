@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+  
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #dff9fb;
+}
+  
+#error-title {
+    font-size: 100px;
+}
+
+.error-container {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-container {
+    margin-bottom: 20px;
+}
+
+#gohome-btn {
+    margin-top: 30px;
+    height: 40px;
+    width: 150px;
+    background-image: linear-gradient(to right top, #28388d, #ab3492, #fd496f, #ff9238, #ffe500);
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+  }
+  
+  #gohome-btn:hover {
+  background-image: linear-gradient(to right top, #28388d, #8d3e76, #ad6164, #b28c71, #b5b39d);
+  }
