@@ -3,12 +3,10 @@ from hashlib import sha256
 from pprint import pprint 
 
 class Block():
-    block_number = 0
-
-    def __init__(self, data, previous_hash=""):
-        Block.block_number += 1
+    def __init__(self, data, previous_hash=0, block_number=0):
         self.data = data
         self.previous_hash = previous_hash
+        self.block_number = block_number
         self.nonce = 0
         self.timestamp = datetime.now()
         self.hash = self.get_hash()
@@ -22,7 +20,7 @@ class Block():
             :rtype: str
         """
         to_digest = "".join([str(item) for item in self.__dict__.values()])
-        to_digest += str(Block.block_number)
+        to_digest += str(self.block_number)
         hash_ = sha256()
         hash_.update(to_digest.encode())
         self.hash = hash_.hexdigest()

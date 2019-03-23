@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5F6368;
+}
+
+header > a {
+    position: absolute;
+    right: 30px;
+}
+
+#title-link {
+    color: #5F6368;
+}
+
+.card-container {
+    position: relative;
+    top: 80px;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card {
+    border-radius: 10px;
+    width: 75%;
+    height: 190px;
+    padding: 10px 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: all 0.5s;
+}
+
+.genesis-card {
+    height: 120px;
+}
+
+.block-infos {
+    display: flex;
+    justify-content: space-between;
+}
+
+#block-infos-left {
+    display: flex;
+
+}
+
+#block-infos-right {
+    border: 0.5px grey solid;
+    border-radius: 5px;
+    height: 20px;
+    padding: 2px;
+    font-size: 10px;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.submit-btn {
+    background: none;
+    background-image: linear-gradient(to right top, #28388d, #ab3492, #fd496f, #ff9238, #ffe500);
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-image: linear-gradient(to left top, #28388d, #ab3492, #fd496f, #ff9238, #ffe500);
+    color: 
+}
+
+#root-hash-displayer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#root-hash-displayer > h5 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#root-hash-displayer > p {
+    color: #5F6368;
+    font-size: 15px;
+}
+
+.hash-displayer {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.hash-displayer > * {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hash-info {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap
+}
+
+.hash-container {
+    font-size: 10px;
+    margin-left: 10px;
+    color: yellowgreen;
+
+}
+
+.hash-container-box {
+    border: 0.5px yellowgreen solid;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: rgba(154, 205, 50, 0.1);
+}

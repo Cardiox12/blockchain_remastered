@@ -1,4 +1,4 @@
-from block import Block
+from .block import Block
 from hashlib import sha256
 from itertools import zip_longest
 
@@ -6,6 +6,7 @@ class Blockchain():
     def __init__(self):
         self.blocks = []
         self.root_hash = ""
+        self.block_number = 0
 
     def add_to_blockchain(self, data):
         """
@@ -18,8 +19,9 @@ class Blockchain():
         if len(self.blocks) < 1:
             self.blocks.append(Block(data))
         else:
+            self.block_number += 1
             if all(block.block_is_valid() for block in self.blocks):
-                self.blocks.append(Block(data, self.blocks[-1].hash))
+                self.blocks.append(Block(data, self.blocks[-1].hash, self.block_number))
         self.blockchain_is_not_corrupted()
     
     def blockchain_is_not_corrupted(self):
