@@ -1,4 +1,4 @@
-from .block import Block
+from block import Block
 from hashlib import sha256
 from itertools import zip_longest
 
